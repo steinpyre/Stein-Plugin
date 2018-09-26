@@ -3,7 +3,7 @@
 }
 .stein-chat-tab{
     color: white;
-    background: rgb(176, 137, 96);
+    background: rgb(125, 97, 67);
     border-radius: 10px 10px 0 0;
     border: 4px solid rgb(38, 33, 25);
     border-bottom: 0;
@@ -12,4 +12,7 @@
     text-align: center;
 	cursor: pointer;
 	font-size: 1.1em;
+}
+.stein-chat-tab.active{
+	background: rgb(176, 137, 96);
 }
