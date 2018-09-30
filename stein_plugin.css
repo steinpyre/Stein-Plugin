@@ -1,6 +1,9 @@
 #stein-chat-tab-container{
 	
 }
+#stein-chat-container-content{
+	margin-top: 0;
+}
 .stein-chat-tab{
     color: white;
     background: rgb(125, 97, 67);
