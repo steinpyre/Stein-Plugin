@@ -31,7 +31,7 @@ var upperCaseIgnoreList = ignoreList.map(function(value) {
 			'<span class="ignore-list-entry-name">'+cName+'</span>'+
 		'</div>';
 	}
-	nnDiv.appendTo(nDiv.find("#stein-hub-ignore-list-list"))
+	$(nnDiv).appendTo(nDiv.find("#stein-hub-ignore-list-list"))
 	nDiv.insertAfter("#stein-hub-frame-friends");
 	$(document).on("click", "#stein-plugin-menu-toggle-button", function(e){
 		if($("#stein-window-container-left-hidden #stein-plugin-window-frame").length){
