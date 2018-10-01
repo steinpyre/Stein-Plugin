@@ -26,9 +26,9 @@ var upperCaseIgnoreList = ignoreList.map(function(value) {
 	var nnDiv = "";
 	for(var i=0; i<ignoreList.length; i++){
 		var cName = ignoreList[i];
-		nnDiv += '<div class="stein-hub-ignore-list-entry">'+
-			'<button class="ignore-list-entry-options"><img src="/assets/images/icon_trash.png"/></button>'+
-			'<span class="ignore-list-entry-name">'+cName+'</span>'+
+		nnDiv += '<div class="stein-hub-friend-list-entry">'+
+			'<button class="friend-list-entry-options"><img src="/assets/images/icon_trash.png"/></button>'+
+			'<span class="friend-list-entry-name">'+cName+'</span>'+
 		'</div>';
 	}
 	nDiv.insertAfter("#stein-hub-frame-friends");
