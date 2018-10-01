@@ -60,6 +60,7 @@ var upperCaseIgnoreList = ignoreList.map(function(value) {
 	});
 	
 	$(document).on("click tap", "#stein-hub-friends", function(e){
+		console.log("????");
 		if($(this).hasClass("selected-button")){
 			$("#stein-hub-frame-ignore").show();
 		} else {
