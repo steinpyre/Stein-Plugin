@@ -4,7 +4,7 @@
 	margin-top: 0;
 }
 #stein-plugin-menu-toggle-button{
-	background: rgb(219, 187, 131) url(/assets/images/shortcuts_button_options.png);
+	background: rgb(219, 187, 131) url(https://steinpyre.github.io/Stein-Plugin/assets/css/stein_plugin.css);
 }
 #stein-plugin-window-frame{
     display: inline-block;
