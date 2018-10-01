@@ -6,6 +6,7 @@
 #stein-plugin-menu-toggle-button{
 	background: rgb(219, 187, 131) url(https://steinpyre.github.io/Stein-Plugin/assets/img/toolbox.png);
 }
+/*
 #stein-plugin-window-frame{
     display: inline-block;
     float: left;
@@ -15,6 +16,16 @@
     border-radius: 10px;
     border: 4px solid rgb(38, 33, 25);
     margin-right: 10px;
+}
+*/
+#stein-hub-ignore-list-list {
+    width: 400px;
+    margin-top: 10px;
+    background-color: #dbbc83;
+    border: 3px solid rgb(38, 33, 25);
+    border-radius: 5px;
+    padding: 6px;
+    margin-bottom: 6px;
 }
 .stein-chat-tab{
     color: white;
