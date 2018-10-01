@@ -59,9 +59,9 @@ var upperCaseIgnoreList = ignoreList.map(function(value) {
 		});
 	});
 	
-	$(document).on("click tap", "#stein-hub-friends", function(e){
+	$(document).on("click tap", ".stein-navigation-button", function(e){
 		console.log("????");
-		if($(this).hasClass("selected-button")){
+		if($("#stein-hub-friends").hasClass("selected-button")){
 			$("#stein-hub-frame-ignore").show();
 		} else {
 			$("#stein-hub-frame-ignore").hide();
