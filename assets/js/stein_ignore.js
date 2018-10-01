@@ -42,6 +42,7 @@ var upperCaseIgnoreList = ignoreList.map(function(value) {
 			upperCaseIgnoreList = ignoreList.map(function(value) {
 				return value.toUpperCase();
 			});
+			rebuildIgnoreList();
 			hideMessages();
 		}
 	});
