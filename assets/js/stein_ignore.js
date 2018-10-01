@@ -13,9 +13,24 @@ var upperCaseIgnoreList = ignoreList.map(function(value) {
 	//Create button
 	$('<div class="stein-toggle-button" id="stein-plugin-menu-toggle-button"></div>').appendTo("#stein-shortcuts-button-container");
 	//Create window
-	$("<div id='stein-plugin-window-frame'>"+
-	  "Coming soon..."+
-	  "</div>").prependTo("#stein-window-container-left-hidden");
+	var nDiv = $('<div class="stein-window-frame-content" id="stein-hub-frame-ignore">'+
+					'<div class="stein-shop-entry-title-info">Ignore List</div>'+
+					'<div class="stein-hub-ignore-list">'+
+						'Add Ignore: <input type="text" id="stein-hub-ignore-list-add-name">'+
+						'<button id="stein-hub-ignore-list-add">+</button>'+
+						'<span id="stein-hub-ignore-list-count">1/10</span>'+
+						'<div id="stein-hub-ignore-list-list">'+
+						'</div>'+
+					'</div>'+
+				  "</div>");
+	for(var i=0; i<ignoreList; i++){
+		var cName = ignoreList[i];
+		$('<div class="stein-hub-friend-list-entry friend-list-entry-state-unknown">'+
+			'<button class="friend-list-entry-options">...</button>'+
+			'<span class="friend-list-entry-name">'+cName+'</span>'+
+		'</div>').appendTo(nDiv);
+	|
+	nDiv.insertAfter("#stein-hub-frame-friends");
 	$(document).on("click", "#stein-plugin-menu-toggle-button", function(e){
 		if($("#stein-window-container-left-hidden #stein-plugin-window-frame").length){
 			$("#stein-plugin-window-frame").remove().appendTo("#stein-window-container-left");
