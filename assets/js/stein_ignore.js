@@ -12,7 +12,7 @@ var upperCaseIgnoreList = ignoreList.map(function(value) {
 	jQuery.noConflict();
 	
 	//Create window
-	var nDiv = $('<div class="stein-window-frame-content" id="stein-hub-frame-ignore">'+
+	var nDiv = $('<div class="stein-window-frame-content" id="stein-hub-frame-ignore" style="display: none;">'+
 					'<div class="stein-shop-entry-title-info">Ignore List</div>'+
 					'<div class="stein-hub-ignore-list">'+
 						'Add Ignore: <input type="text" id="stein-hub-ignore-list-add-name">'+
