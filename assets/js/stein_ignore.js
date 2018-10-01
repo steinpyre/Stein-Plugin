@@ -29,7 +29,7 @@ var upperCaseIgnoreList = ignoreList.map(function(value) {
 			'<button class="friend-list-entry-options">...</button>'+
 			'<span class="friend-list-entry-name">'+cName+'</span>'+
 		'</div>').appendTo(nDiv);
-	|
+	}
 	nDiv.insertAfter("#stein-hub-frame-friends");
 	$(document).on("click", "#stein-plugin-menu-toggle-button", function(e){
 		if($("#stein-window-container-left-hidden #stein-plugin-window-frame").length){
