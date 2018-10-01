@@ -4,7 +4,7 @@ javascript: (function(e, s) {
 		(function($) {
 			jQuery.noConflict();
 			//Load our custom CSS/HTML
-			var cssPath = "https://steinpyre.github.io/Stein-Plugin/stein_plugin.css";
+			var cssPath = "https://steinpyre.github.io/Stein-Plugin/assets/stein_plugin.css";
 			if (!$("link[href='"+cssPath+"']").length) $('<link href="'+cssPath+'" rel="stylesheet">').appendTo("head");
 			$("<div id='stein-chat-tab-container'>"+
 			  "<div class='stein-chat-tab active' data-target='all'>All</div>"+
