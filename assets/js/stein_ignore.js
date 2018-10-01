@@ -33,12 +33,27 @@ var upperCaseIgnoreList = ignoreList.map(function(value) {
 	}
 	nDiv.insertAfter("#stein-hub-frame-friends");
 	$(nnDiv).appendTo($("#stein-hub-ignore-list-list"));
+	/*
 	$(document).on("click", "#stein-plugin-menu-toggle-button", function(e){
 		if($("#stein-window-container-left-hidden #stein-plugin-window-frame").length){
 			$("#stein-plugin-window-frame").remove().appendTo("#stein-window-container-left");
 		} else {
 			$("#stein-plugin-window-frame").remove().appendTo("#stein-window-container-left-hidden");
 		}
+	});
+	*/
+	
+	$(document).on("click", "#stein-hub-ignore-list-list .friend-list-entry-options", function(e){
+		var name = $(this).siblings(".friend-list-entry-name").text();
+		$(this).parents(".stein-hub-friend-list-entry").remove();
+		for (var i=ignoreList.length-1; i>=0; i--){
+			if (ignoreList[i] === name){
+				ignoreList.splice(i, 1);
+			}
+		}
+		upperCaseIgnoreList = ignoreList.map(function(value) {
+			return value.toUpperCase();
+		});
 	});
 	hideMessages();
 	$("#stein-chat-content").on('DOMNodeInserted', function(e){
