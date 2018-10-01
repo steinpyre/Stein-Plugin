@@ -18,6 +18,7 @@
     margin-right: 10px;
 }
 */
+
 #stein-hub-ignore-list-list {
     width: 400px;
     margin-top: 10px;
@@ -27,10 +28,14 @@
     padding: 6px;
     margin-bottom: 6px;
 }
+#stein-hub-ignore-list-add, #stein-hub-ignore-list-count{
+	margin-right: 5px;
+}
 .friend-list-entry-options img{
 	max-width: 100%;
 	max-height: 100%;
 }
+
 .stein-chat-tab{
     color: white;
     background: rgb(125, 97, 67);
