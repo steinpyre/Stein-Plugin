@@ -24,15 +24,15 @@ var upperCaseIgnoreList = ignoreList.map(function(value) {
 					'</div>'+
 				  "</div>");
 	var nnDiv = "";
-	for(var i=0; i<ignoreList; i++){
+	for(var i=0; i<ignoreList.length; i++){
 		var cName = ignoreList[i];
 		nnDiv += '<div class="stein-hub-ignore-list-entry">'+
 			'<button class="ignore-list-entry-options"><img src="/assets/images/icon_trash.png"/></button>'+
 			'<span class="ignore-list-entry-name">'+cName+'</span>'+
 		'</div>';
 	}
-	$(nnDiv).appendTo(nDiv.find("#stein-hub-ignore-list-list"));
 	nDiv.insertAfter("#stein-hub-frame-friends");
+	$(nnDiv).appendTo($("#stein-hub-ignore-list-list"));
 	$(document).on("click", "#stein-plugin-menu-toggle-button", function(e){
 		if($("#stein-window-container-left-hidden #stein-plugin-window-frame").length){
 			$("#stein-plugin-window-frame").remove().appendTo("#stein-window-container-left");
