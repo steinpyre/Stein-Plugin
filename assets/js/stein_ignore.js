@@ -10,8 +10,7 @@ var upperCaseIgnoreList = ignoreList.map(function(value) {
 });
 (function($) {
 	jQuery.noConflict();
-	//Create button
-	//$('<div class="stein-toggle-button" id="stein-plugin-menu-toggle-button"></div>').appendTo("#stein-shortcuts-button-container");
+	
 	//Create window
 	var nDiv = $('<div class="stein-window-frame-content" id="stein-hub-frame-ignore">'+
 					'<div class="stein-shop-entry-title-info">Ignore List</div>'+
@@ -23,27 +22,29 @@ var upperCaseIgnoreList = ignoreList.map(function(value) {
 						'</div>'+
 					'</div>'+
 				  "</div>");
-	var nnDiv = "";
-	for(var i=0; i<ignoreList.length; i++){
-		var cName = ignoreList[i];
-		nnDiv += '<div class="stein-hub-friend-list-entry">'+
-			'<button class="friend-list-entry-options"><img src="/assets/images/icon_trash.png"/></button>'+
-			'<span class="friend-list-entry-name">'+cName+'</span>'+
-		'</div>';
-	}
 	nDiv.insertAfter("#stein-hub-frame-friends");
-	$(nnDiv).appendTo($("#stein-hub-ignore-list-list"));
-	/*
-	$(document).on("click", "#stein-plugin-menu-toggle-button", function(e){
-		if($("#stein-window-container-left-hidden #stein-plugin-window-frame").length){
-			$("#stein-plugin-window-frame").remove().appendTo("#stein-window-container-left");
-		} else {
-			$("#stein-plugin-window-frame").remove().appendTo("#stein-window-container-left-hidden");
+	
+	rebuildIgnoreList();
+	hideMessages();
+	
+	$(document).on("click tap", "#stein-hub-ignore-list-add", function(e){
+		var exists = false;
+		var name = $(this).val();
+		for (var i=ignoreList.length-1; i>=0; i--){
+			if (ignoreList[i] === name){
+				exists = true;
+			}
+		}
+		if(!exists){
+			ignoreList.push(name);
+			upperCaseIgnoreList = ignoreList.map(function(value) {
+				return value.toUpperCase();
+			});
+			hideMessages();
 		}
 	});
-	*/
 	
-	$(document).on("click", "#stein-hub-ignore-list-list .friend-list-entry-options", function(e){
+	$(document).on("click tap", "#stein-hub-ignore-list-list .friend-list-entry-options", function(e){
 		var name = $(this).siblings(".friend-list-entry-name").text();
 		$(this).parents(".stein-hub-friend-list-entry").remove();
 		for (var i=ignoreList.length-1; i>=0; i--){
@@ -55,7 +56,7 @@ var upperCaseIgnoreList = ignoreList.map(function(value) {
 			return value.toUpperCase();
 		});
 	});
-	hideMessages();
+	
 	$("#stein-chat-content").on('DOMNodeInserted', function(e){
 		hideMessages();
 	});
@@ -67,6 +68,22 @@ var upperCaseIgnoreList = ignoreList.map(function(value) {
 				//console.log("stein_ignore.js: Message from "+name+" removed.");
 			}
 		});
+	}
+	function rebuildIgnoreList(){
+		upperCaseIgnoreList = ignoreList.map(function(value) {
+			return value.toUpperCase();
+		});
+		$("#stein-hub-ignore-list-list").empty();
+		//Create entries
+		var nnDiv = "";
+		for(var i=0; i<ignoreList.length; i++){
+			var cName = ignoreList[i];
+			nnDiv += '<div class="stein-hub-friend-list-entry">'+
+				'<button class="friend-list-entry-options"><img src="/assets/images/icon_trash.png"/></button>'+
+				'<span class="friend-list-entry-name">'+cName+'</span>'+
+			'</div>';
+		}
+		$(nnDiv).appendTo($("#stein-hub-ignore-list-list"));
 	}
 	console.log("stein_ignore.js: Script loaded");
 })(jQuery);
