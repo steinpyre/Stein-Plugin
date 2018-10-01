@@ -29,9 +29,9 @@ var upperCaseIgnoreList = ignoreList.map(function(value) {
 	
 	$(document).on("click tap", "#stein-hub-ignore-list-add", function(e){
 		var exists = false;
-		var name = $(this).val();
+		var name = $("#stein-hub-ignore-list-add-name").val();
 		console.log(name);
-		$(this).val("");
+		$("#stein-hub-ignore-list-add-name").val("");
 		for (var i=ignoreList.length-1; i>=0; i--){
 			if (ignoreList[i] === name){
 				exists = true;
