@@ -17,7 +17,7 @@ var upperCaseIgnoreList = ignoreList.map(function(value) {
 					'<div class="stein-hub-ignore-list">'+
 						'Add Ignore: <input type="text" id="stein-hub-ignore-list-add-name">'+
 						'<button id="stein-hub-ignore-list-add">+</button>'+
-						'<span id="stein-hub-ignore-list-count">1/10</span>'+
+						'<span id="stein-hub-ignore-list-count"></span>'+
 						'<div id="stein-hub-ignore-list-list">'+
 						'</div>'+
 					'</div>'+
@@ -60,12 +60,15 @@ var upperCaseIgnoreList = ignoreList.map(function(value) {
 	});
 	
 	$(document).on("click tap", ".stein-navigation-button", function(e){
-		console.log("????");
 		if($("#stein-hub-friends").hasClass("selected-button")){
 			$("#stein-hub-frame-ignore").show();
 		} else {
 			$("#stein-hub-frame-ignore").hide();
 		}
+	});
+	
+	$(document).on("keypress", "#stein-hub-ignore-list-add-name", function(e){
+		event.stopPropagation();
 	});
 	
 	$("#stein-chat-content").on('DOMNodeInserted', function(e){

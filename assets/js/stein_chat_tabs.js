@@ -9,7 +9,7 @@
 	  "<div class='stein-chat-tab' data-target='stein-chat-message-whisper'>Whisper</div>"+
 	"</div>").prependTo("#stein-chat-container");
 	//Setup tab click events
-	$(document).on("click", ".stein-chat-tab", function(e){
+	$(document).on("click tap", ".stein-chat-tab", function(e){
 		$(".stein-chat-tab").removeClass("active");
 		$(this).addClass("active");
 		var target = $(this).attr("data-target");
