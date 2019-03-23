@@ -51,3 +51,7 @@
 .stein-chat-tab.active{
 	background: rgb(176, 137, 96);
 }
+
+#stein-options-frame-dropalerts span{
+	margin-left: 5px;
+}

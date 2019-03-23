@@ -2,7 +2,7 @@ var alert = new Audio("https://steinpyre.github.io/Stein-Plugin/assets/mp3/alert
 alert.volume = 0.2;
 //alert.play();
 
-var nDiv = $('<div class="stein-window-frame-content" id="stein-options-frame-dropalerts">'+
+var nDiv = $('<div class="stein-window-frame-content stein-suite-frame-content" id="stein-options-frame-dropalerts">'+
 				'<div class="stein-window-frame-content-header">Drop Alerts</div>'+
 				'<input type="checkbox" id="stein-options-drop-alert-common" style="display: none;">'+
 				'<label for="stein-stein-options-drop-alert-common" class="checkbox-label"></label>'+
