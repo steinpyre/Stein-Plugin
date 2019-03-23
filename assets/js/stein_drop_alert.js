@@ -40,7 +40,7 @@ nDiv.insertAfter("#stein-options-frame-sound");
 				nodes.each(function() {
 					var node = $(this);
 					if(node.hasClass("stein-dropped-item-container")){
-						_playAlert = true;
+						//_playAlert = true;
 						var childNode = node.find(".stein-dropped-item").eq(0);
 						//if(childNode.hasClass("stein-dropped-item-common")) _playAlert = true;
 						//if(childNode.hasClass("stein-dropped-item-uncommon")) _playAlert = true;
