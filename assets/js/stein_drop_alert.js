@@ -43,7 +43,7 @@ nDiv.insertAfter("#stein-options-frame-sound");
 						_playAlert = true;
 						var childNode = node.find(".stein-dropped-item").eq(0);
 						//if(childNode.hasClass("stein-dropped-item-common")) _playAlert = true;
-						if(childNode.hasClass("stein-dropped-item-uncommon")) _playAlert = true;
+						//if(childNode.hasClass("stein-dropped-item-uncommon")) _playAlert = true;
 						if(childNode.hasClass("stein-dropped-item-rare")) _playAlert = true;
 						if(childNode.hasClass("stein-dropped-item-epic")) _playAlert = true;
 						if(childNode.hasClass("stein-dropped-item-legendary")) _playAlert = true;
