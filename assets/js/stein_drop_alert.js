@@ -4,23 +4,23 @@ alert.volume = 0.2;
 
 var nDiv = $('<div class="stein-window-frame-content" id="stein-options-frame-dropalerts">'+
 				'<div class="stein-window-frame-content-header">Drop Alerts</div>'+
-				'<input type="checkbox" id="stein-options-drop-alert-common">'+
-				'<label for="stein-options-sound-overall-muted" class="checkbox-label"></label>'+
+				'<input type="checkbox" id="stein-options-drop-alert-common" style="display: none;">'+
+				'<label for="stein-stein-options-drop-alert-common" class="checkbox-label"></label>'+
 				'<span style="font-size: 18px;">Common</span>'+
 				'<br>'+
-				'<input type="checkbox" id="stein-options-drop-alert-uncommon">'+
-				'<label for="stein-options-sound-music-muted" class="checkbox-label"></label>'+
+				'<input type="checkbox" id="stein-options-drop-alert-uncommon" style="display: none;">'+
+				'<label for="stein-options-drop-alert-uncommon" class="checkbox-label"></label>'+
 				'<span style="font-size: 18px;">Uncommon</span>'+
 				'<br>'+
-				'<input type="checkbox" id="stein-options-drop-alert-rare">'+
-				'<label for="stein-options-sound-effect-muted" class="checkbox-label"></label>'+
+				'<input type="checkbox" id="stein-options-drop-alert-rare" style="display: none;">'+
+				'<label for="stein-options-drop-alert-rare" class="checkbox-label"></label>'+
 				'<span style="font-size: 18px;">Rare</span>'+
 				'<br>'+
-				'<input type="checkbox" id="stein-options-drop-alert-epic">'+
-				'<label for="stein-options-sound-effect-muted" class="checkbox-label"></label>'+
+				'<input type="checkbox" id="stein-options-drop-alert-epic" style="display: none;">'+
+				'<label for="stein-options-drop-alert-epic" class="checkbox-label"></label>'+
 				'<span style="font-size: 18px;">Epic</span>'+
 				'<br>'+
-				'<input type="checkbox" id="stein-options-drop-alert-legendary">'+
+				'<input type="checkbox" id="stein-options-drop-alert-legendary" style="display: none;">'+
 				'<label for="stein-options-sound-effect-muted" class="checkbox-label"></label>'+
 				'<span style="font-size: 18px;">Legendary</span>'+
 			'</div>');
