@@ -27,7 +27,7 @@ alert.volume = 0.3;
 					}
 				});
 			}
-			if(playAlert) alert.play();
+			if(_playAlert) alert.play();
 		});
 	});
 	// Configuration of the observer:
