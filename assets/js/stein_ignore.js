@@ -21,7 +21,7 @@ var upperCaseIgnoreList = ignoreList.map(function(value) {
 						'<div id="stein-hub-ignore-list-list">'+
 						'</div>'+
 					'</div>'+
-				  "</div>");
+				"</div>");
 	nDiv.insertAfter("#stein-hub-frame-friends");
 	
 	rebuildIgnoreList();

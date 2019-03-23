@@ -20,6 +20,7 @@ loadScript("//code.jquery.com/jquery-latest.min.js", function(){
 		loadScript("https://steinpyre.github.io/Stein-Plugin/assets/js/stein_chat_tabs.js", function(){});
 		loadScript("https://steinpyre.github.io/Stein-Plugin/assets/js/stein_ignore.js", function(){});
 		loadScript("https://steinpyre.github.io/Stein-Plugin/assets/js/stein_timestamp.js", function(){});
+		loadScript("https://steinpyre.github.io/Stein-Plugin/assets/js/stein_drop_alert.js", function(){});
 		//alert("scripts loaded");
 		if (!$("link[href='"+cssPath+"']").length) $('<link href="'+cssPath+'" rel="stylesheet">').appendTo("head");
 	})(jQuery);
