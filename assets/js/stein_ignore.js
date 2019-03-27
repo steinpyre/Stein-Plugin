@@ -8,7 +8,7 @@ var upperCaseIgnoreList = ignoreList.map(function(value) {
 (function($) {
 	jQuery.noConflict();
 	
-	console.log("Ignore list: "+$.cookie("ignorelist"));
+	console.log("Ignore list: "+read_cookie("ignorelist"));
 	
 	//Create window
 	var nDiv = $('<div class="stein-window-frame-content" id="stein-hub-frame-ignore" style="display: none;">'+
@@ -37,17 +37,7 @@ var upperCaseIgnoreList = ignoreList.map(function(value) {
 		}
 		if(!exists){
 			ignoreList.push(name);
-			$.cookie.json = true;
-			$.cookie("ignorelist", ignoreList, {
-			   expires : 365,           // Expires in 10 days
-			   path    : '/',          // The value of the path attribute of the cookie
-									   // (Default: path of page that created the cookie).
-			   domain  : 'stein.world', // The value of the domain attribute of the cookie
-									   // (Default: domain of page that created the cookie).
-			   secure  : false          // If set to true the secure attribute of the cookie
-									   // will be set and the cookie transmission will
-									   // require a secure protocol (defaults to false).
-			});
+			set_cookie("ignorelist" ignorelist);
 			upperCaseIgnoreList = ignoreList.map(function(value) {
 				return value.toUpperCase();
 			});
