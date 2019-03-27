@@ -17,6 +17,7 @@ var cssPath = "https://steinpyre.github.io/Stein-Plugin/assets/css/stein_plugin.
 loadScript("//code.jquery.com/jquery-latest.min.js", function(){
 	//alert("jquery loaded");
 	(function($) {
+		loadScript("https://steinpyre.github.io/Stein-Plugin/vendors/cookie_js/js.cookie.min.js", function(){});
 		loadScript("https://steinpyre.github.io/Stein-Plugin/assets/js/stein_chat_tabs.js", function(){});
 		loadScript("https://steinpyre.github.io/Stein-Plugin/assets/js/stein_ignore.js", function(){});
 		loadScript("https://steinpyre.github.io/Stein-Plugin/assets/js/stein_timestamp.js", function(){});
