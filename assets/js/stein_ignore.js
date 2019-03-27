@@ -37,7 +37,7 @@ var upperCaseIgnoreList = ignoreList.map(function(value) {
 		}
 		if(!exists){
 			ignoreList.push(name);
-			set_cookie("ignorelist" ignorelist);
+			set_cookie("ignorelist", ignorelist);
 			upperCaseIgnoreList = ignoreList.map(function(value) {
 				return value.toUpperCase();
 			});
