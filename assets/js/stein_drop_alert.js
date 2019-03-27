@@ -26,7 +26,6 @@ var nDiv = $('<div class="stein-window-frame-content stein-suite-frame-content" 
 			'</div>');
 nDiv.insertAfter("#stein-options-frame-sound");
 
-
 (function($) {
 	jQuery.noConflict();
 	console.log("stein_dropalert.js: Script loaded");
@@ -40,14 +39,12 @@ nDiv.insertAfter("#stein-options-frame-sound");
 				nodes.each(function() {
 					var node = $(this);
 					if(node.hasClass("stein-dropped-item-container")){
-						//_playAlert = true;
 						var childNode = node.find(".stein-dropped-item").eq(0);
 						//if(childNode.hasClass("stein-dropped-item-common")) _playAlert = true;
 						//if(childNode.hasClass("stein-dropped-item-uncommon")) _playAlert = true;
 						if(childNode.hasClass("stein-dropped-item-rare")) _playAlert = true;
 						if(childNode.hasClass("stein-dropped-item-epic")) _playAlert = true;
 						if(childNode.hasClass("stein-dropped-item-legendary")) _playAlert = true;
-						//console.log("stein_dropalert.js: Item dropped");
 					}
 				});
 			}

@@ -1,9 +1,8 @@
 //Define users in your ignore list here
 //Case insensitive
 //Ex: Adding "annoyingName" will ignore player "aNnOyInGnAmE"
+console.log($.cookie("ignorelist"));
 var ignoreList = [
-    "username1",
-    "username2",
 ];
 var upperCaseIgnoreList = ignoreList.map(function(value) {
 	return value.toUpperCase();
@@ -38,6 +37,17 @@ var upperCaseIgnoreList = ignoreList.map(function(value) {
 		}
 		if(!exists){
 			ignoreList.push(name);
+			$.cookie.json = true;
+			$.cookie("ignorelist", ignoreList, {
+			   expires : 365,           // Expires in 10 days
+			   path    : '/',          // The value of the path attribute of the cookie
+									   // (Default: path of page that created the cookie).
+			   domain  : 'stein.world', // The value of the domain attribute of the cookie
+									   // (Default: domain of page that created the cookie).
+			   secure  : false          // If set to true the secure attribute of the cookie
+									   // will be set and the cookie transmission will
+									   // require a secure protocol (defaults to false).
+			});
 			upperCaseIgnoreList = ignoreList.map(function(value) {
 				return value.toUpperCase();
 			});
