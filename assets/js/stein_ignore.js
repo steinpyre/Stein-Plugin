@@ -1,9 +1,9 @@
 //Define users in your ignore list here
 //Case insensitive
 //Ex: Adding "annoyingName" will ignore player "aNnOyInGnAmE"
-console.log($.cookie("ignorelist"));
-var ignoreList = [
-];
+console.log("Ignore list: "+$.cookie("ignorelist"));
+console.log();
+var ignoreList = [];
 var upperCaseIgnoreList = ignoreList.map(function(value) {
 	return value.toUpperCase();
 });
