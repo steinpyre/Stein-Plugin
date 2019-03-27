@@ -56,7 +56,7 @@ Loader.prototype = {
 var mLoader = new Loader();
 mLoader.require([
 	"//code.jquery.com/jquery-latest.min.js",
-	"https://steinpyre.github.io/Stein-Plugin/vendors/cookie_js/js.cookie.min.js",
+	"https://steinpyre.github.io/Stein-Plugin/vendors/cookie_js/js.cookie.min.jssssssss",
 	], 
 	function() {
 		mLoader.require(["https://steinpyre.github.io/Stein-Plugin/assets/js/stein_chat_tabs.js"], function(){})
