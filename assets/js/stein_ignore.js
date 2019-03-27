@@ -8,7 +8,16 @@ var upperCaseIgnoreList = ignoreList.map(function(value) {
 (function($) {
 	jQuery.noConflict();
 	
-	alert("Ignore list: "+read_cookie("ignorelist"));
+	var cookie = read_cookie("ignorelist");
+	if(cookie == null){
+		set_cookie(ignoreList);
+	}
+	else{
+		ignoreList = cookie;
+		rebuildIgnoreList();
+		hideMessages();
+	}
+	//alert("Ignore list: "+read_cookie("ignorelist"));
 	
 	//Create window
 	var nDiv = $('<div class="stein-window-frame-content" id="stein-hub-frame-ignore" style="display: none;">'+
